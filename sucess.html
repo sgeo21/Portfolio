@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br"> <!-- em en é em ingles, pt -br é porugues brasileiro -->
 <head>
-    <meta charset="UTF-8"> <!-- padrão de configuração de caractéres, para entender os acentos e etc-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- define como a pagina será inicializada -->
+
+    <!-- Servidores de Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ 
+    <!-- Fonte do Google - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+ 
+    <!-- padrão de configuração de caractéres, para entender os acentos e etc-->
+    <meta charset="UTF-8"> 
+
+    <!-- Define como a pagina será inicializada -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     
     <!-- Meta tags Essenciais  -->
     <meta name ="Author" content="Geovana Cazali">
@@ -12,21 +23,25 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
 
-    <title>Mensagem enviada com sucesso</title> <!-- define o título da página -->
+    <!-- Link para o arquivo CSS -->
+     <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <!-- define o título da página -->
+    <title>Portfólio da Geovana</title> 
 </head>
 <body>
     <!-- Navbar - Menu -->
     <header class="flex menu_container"> <!-- classe que configura a pagina-->
         <article class="menu_content">
             <div id="titulo"> <!-- divisão - titulo, para voltar sempre a pagina inicial-->
-                <a href="#">Portfólio</a> <!-- o a é para o menu criar essa estensão-->
+                <a href="index.html">Portfólio</a> <!-- para onde vai quando clicado -->
             </div> 
 
             <nav> <!--navegador - é contruico com marcadores ordenados ou não ordenados-->
                 <ul class="flex menu_list">
-                    <li><a href="#hero">Início</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="index.html#hero">Início</a></li> <!-- aqui foi adicionado-->
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
                 </ul>
             </nav>
         </article>
