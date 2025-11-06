@@ -30,43 +30,47 @@
     <title>Portfólio da Geovana</title> 
 </head>
 <body>
-    <!-- Navbar - Menu -->
-    <header class="flex menu_container"> <!-- classe que configura a pagina-->
+   <body>
+    <!-- MENU -->
+    <header class="flex menu_container">
         <article class="menu_content">
-            <div id="titulo"> <!-- divisão - titulo, para voltar sempre a pagina inicial-->
-                <a href="index.html">Portfólio</a> <!-- para onde vai quando clicado -->
-            </div> 
-
-            <nav> <!--navegador - é contruico com marcadores ordenados ou não ordenados-->
+            <div id="titulo">
+                <a href="index.html">Portfolio</a> <!--Garanter que o menu continua voltando para a página inicial-->
+            </div>
+            <nav>
                 <ul class="flex menu_list">
-                    <li><a href="index.html#hero">Início</a></li> <!-- aqui foi adicionado-->
+                    <li><a href="index.html#hero">Início</a></li> <!--Garanter que o menu continua voltando para a página inicial-->
                     <li><a href="index.html#about">Sobre</a></li>
                     <li><a href="index.html#contact">Contato</a></li>
                 </ul>
             </nav>
         </article>
-
     </header>
 
-            <!-- Mensagem enviada com sucesso-->
-            <form>
-                <div class="container">
-                    <img 
-                       src="./assets/img/sucess.svg"
-                       alt="Concluído"
-                    >
-                    <h1> Mensagem enviada com sucesso!</h1>
-                    <p>Obrigado por entrar em contato. Retornaremos em breve!</p>
-                    <a href="index.html">Voltar ao formulário</a>
-                </div>
-             </form>
+    <!-- MAIN -->
+    <main>
+        <section class="sucess_container">
+            <article class="sucess_content">
+
+                <figure class="sucess_icon">
+                    <img src="./assets/img/sucess.svg" alt="Ilustração de desenvolvedor trabalhando"
+                        class="sucess_icon float-animation">
+                </figure>
+
+                <h1>E-mail enviado com Sucesso!</h1>
+                <h4>Obrigado por entrar em contato! <br /> Logo mais retornarei sua mensagem.</h4>
+
+                <a class="botao" href="index.html">Voltar para o Início</a>
+
+            </article>
         </section>
     </main>
 
-    <!-- Footer - Rodapé -->
+    <!-- FOOTER -->
     <footer>
         Feito com ❤️ por Geovana Cazali - 2025
     </footer>
 
 </body>
+
 </html>
