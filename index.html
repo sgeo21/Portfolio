@@ -16,8 +16,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     
     <!-- Meta tags Essenciais  -->
-    <meta name ="Author" content="Geovana Cazali">
-    <meta name="description" content="Portifólio de Geovana Cazali, desenvolvedora Fulstack, conheça meus projetos e entre em contato">
+    <meta name ="author" content="Geovana Cazali">
+    <meta name="description" 
+        content="Portifólio de Geovana Cazali, desenvolvedora Fulstack, conheça meus projetos e entre em contato">
     <meta name="robots" content="index, follow"> <!-- começa pela index e segue pelas outras paginas-->
 
     <!-- Favicon -->
@@ -63,7 +64,7 @@
             </article>
             <figure class="hero_image">
                 <img
-                    src="./assets/img/dev_geovana.svg"
+                    src="./assets/img/geo_dev.svg"
                     alt="Ilustração com uma pessoa desenvolvedora escrevendo código."
                     class="ilustracao float-animation"
                 >
@@ -108,55 +109,60 @@
                 <h4> Entre em contato</h4>
                 <p> Sinta-se à vontade para entrar em contato comigo</p>
                 <div class="social_container">
-                    <a herf="#" target="blank" ckass="social_icon">
+                    <a href="https://www.linkedin.com/in/geovana-cazali/" target="_blank" class="social_icon">
                        <img 
-                           src="./assets/img/linkedin.svg"
-                          alt="Link para o Linkedin"
+                         src="./assets/img/linkedin.svg"
+                         alt="Link para o Linkedin"
                         >
                     </a>
-                    <a herf="https://github.com/sgeo21" target="blank" ckass="social_icon">
+                    <a href="https://github.com/sgeo21" target="_blank" class="social_icon">
                        <img 
-                           src="./assets/img/github.svg"
-                          alt="Link para o GitHub"
+                         src="./assets/img/github.svg"
+                         alt="Link para o GitHub"
                         >
                     </a>
-                    <a herf="#" target="blank" ckass="social_icon">
+                    <a href="https://www.instagram.com/geo.cazali" target="_blank" class="social_icon">
                        <img 
-                           src="./assets/img/instagram.svg"
-                          alt="Link para o Instagram"
+                         src="./assets/img/instagram.svg"
+                         alt="Link para o Instagram"
                         >
                     </a>
-                    <a herf="#" target="blank" ckass="social_icon">
+                    <a href="https://www.facebook.com/geovana.cazali" target="_blank" class="social_icon">
                        <img 
-                           src="./assets/img/facebook.svg"
-                          alt="Link para o Facebook"
+                         src="./assets/img/facebook.svg"
+                         alt="Link para o Facebook"
                         >
                     </a>
                 </div>
             </article>
 
             <!-- Formulário - label define o nome, imput o que será digitado e como será e span o que não deve conter -->
-            <form id="formulario">
+            <form action="https://formsubmit.co/1fcce86b9de0a5994aa0d8443abc6b82" method="POST" id="formulario"> <!--inclui o email para o recebimento das mensagens-->
+                
+                <input type ="hidden" name="_next" value="http://127.0.0.1:5500/sucess.html"> <!-- a porta do servidor-->
+                <input type ="hidden" name="_captcha" value="false"> <!--para teste pode desabilitar previne spam, para produção pode colocar true--> 
+
+
                 <label for="nome">Nome</label>
-                <input id="nome" name="nome" type="text" placeholder="Digite seu nome completo"></input>
+                <input id="nome" name="nome" type="text" placeholder="Digite o seu nome completo">
                 <span id="txtNome"></span>
 
                 <label for="email">E-mail</label>
-                <input id="email" name="email" type="text" placeholder="Digite seu e-mail"></input>
-                <span id="txtemail"></span>
+                <input id="email" name="email" type="text" placeholder="Digite o seu e-mail">
+                <span id="txtEmail"></span>
 
                 <label for="assunto">Assunto</label>
-                <input id="assunto" name="assunto" type="text" placeholder="Digite o assunto da mensagem"></input>
+                <input id="assunto" name="assunto" type="text" placeholder="Digite o assunto da mensagem">
                 <span id="txtAssunto"></span>
 
-                <label for="menagem">Mensagem</label>
-                <textarea is="mensagem" name="mensagem" placeholder="Escreva a sua Mensagem aqui..."></textarea>
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva a sua mensagem aqui..."></textarea>
 
-                <button class="botao" type="submit">Enviar messagem</button>
-                <button class="botao" type="reset">Cancelar</button>
+                <!-- verificar pq não aparece mensagem de erro e nem manda a mensagem  -->
+                <button class="botao" type="submit">Enviar Mensagem</button>
             </form>
         </section>
-    </main>
+    </main>    
 
     <!-- Footer - Rodapé -->
     <footer>

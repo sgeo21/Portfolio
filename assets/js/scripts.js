@@ -1,6 +1,14 @@
 // Selecionar a Seção About
 const about = document.querySelector('#about');
 
+//Selecionar o formulário
+const formulario = document.querySelector('#formulario');
+
+// Expressão Regular para validação de e-mail
+const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+ 
+
+
 // Função para buscar os dados no GitHub
 async function getApiGithub(){
 
@@ -61,6 +69,57 @@ async function getApiGithub(){
         console.error(error);
     }
 }
+
+// Função de envio e validação do formulário
+formulario.addEventListener('submit', function(event){
+    //Impedir o envio automático do formulário 
+    event.preventDefault(); // não enviar o formulário enquanto não houver a validação
+
+    //Validação do campo nome
+    const campoNome = document.querySelector('#nome');
+    const txtNome =document.querySelector('#txtNome');
+
+    // Nome precisa ter no minimo 3 carcateres
+
+    if(campoNome.value.length <3){
+        txtNome.innerHTML = 'O nome deve ter no mínimo 3 caracteres.';
+        campoNome.focus();
+        return;
+    }else{
+        txtNome.innerHTML = ''; 
+    }
+
+     //Validação do campo e-mail
+    const campoEmail = document.querySelector('#email');
+    const txtEmail =document.querySelector('#txtEmail');
+
+    // Email precisa ter no minimo caracteres especiais @,., etc.
+
+    if(!campoEmail.value.match(emailRegex)){ // verifica a digitação
+        txtEmail.innerHTML = 'Digite um e-mail válido.'; // pede a correção
+        campoEmail.focus(); 
+        return;
+    }else{
+        txtEmail.innerHTML = ''; 
+    }
+
+    //Validação do campo Assunto
+    const campoAssunto = document.querySelector('#assunto');
+    const txtAssunto =document.querySelector('#txtAssunto');
+
+    // Nome precisa ter no minimo 5 carcateres
+
+    if(campoAssunto.value.length <5){
+        txtAssunto.innerHTML = 'O assunto deve ter no mínimo 5 caracteres.';
+        campoAssunto.focus();
+        return;
+    }else{
+        txtAssunto.innerHTML = ''; 
+    }
+    //pode fazer uma validação de mensagem se quiser! 
+    //Se passou por todas as validações, envia o formulário
+    formulario.submit();
+})
 
 // Chamar a função getAPIGithub()
 
