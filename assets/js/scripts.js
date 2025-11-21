@@ -121,6 +121,7 @@ formulario.addEventListener('submit', function(event){
     formulario.submit();
 })
 
+
 //cria o carrossel de projetos 
         var myIndex = 0;
             carousel();
@@ -135,6 +136,7 @@ formulario.addEventListener('submit', function(event){
                 x[myIndex - 1].style.display = "block";
                 setTimeout(carousel, 5000); // Change image every 2 seconds
             }
+
             // Audio
 function tocarAudio() {
     var audio = document.getElementById('meuAudio');
