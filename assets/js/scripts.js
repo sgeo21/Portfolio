@@ -119,10 +119,9 @@ formulario.addEventListener('submit', function(event){
     //pode fazer uma validação de mensagem se quiser! 
     //Se passou por todas as validações, envia o formulário
     formulario.submit();
-})
+});
 
 // Chamar a função getAPIGithub()
-
 
 getApiGithub();
 
