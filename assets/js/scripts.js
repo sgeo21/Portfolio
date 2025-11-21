@@ -121,8 +121,13 @@ formulario.addEventListener('submit', function(event){
     formulario.submit();
 })
 
+// Chamar a função getAPIGithub()
 
-//cria o carrossel de projetos 
+
+getApiGithub();
+
+
+    //cria o carrossel de projetos 
         var myIndex = 0;
             carousel();
             function carousel() {
@@ -138,27 +143,17 @@ formulario.addEventListener('submit', function(event){
             }
 
             // Audio
-function tocarAudio() {
-    var audio = document.getElementById('meuAudio');
-    audio.play();
-}
-
-// Alternativamente, para controlar o loop via JS (embora o atributo HTML seja suficiente):
-var audioJS = document.getElementById('meuAudio');
-audioJS.loop = true; {
-
-    const meuAudio = document.getElementById("meuAudio");
-    meuAudio.play();
-}
-
-function pausarAudio() {
-    const meuAudio = document.getElementById("meuAudio");
-    meuAudio.pause();
-}
-
-    
-
-// Chamar a função getAPIGithub()
-
-
-getApiGithub();
+            function tocarAudio() {
+                 var audio = document.getElementById('meuAudio');
+                 audio.play();
+                }
+            // Alternativamente, para controlar o loop via JS (embora o atributo HTML seja suficiente):
+                var audioJS = document.getElementById('meuAudio');
+                audioJS.loop = true; {
+                    const meuAudio = document.getElementById("meuAudio");
+                    meuAudio.play();
+                }
+            function pausarAudio() {
+                const meuAudio = document.getElementById("meuAudio");
+                meuAudio.pause();
+            }
