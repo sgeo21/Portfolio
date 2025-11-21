@@ -340,7 +340,7 @@ button{
 }
 
 .projeto_image img{
-    width: 350px; /* tamanho que você desejar */
+    width: 550px; /* tamanho que você desejar */
     height: 350px;
     object-fit: cover; /* mantém o corte e evita distorção */
     border-radius: 8px; /* opcional */
