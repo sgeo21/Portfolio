@@ -37,12 +37,16 @@
             <div id="titulo"> <!-- divisão - titulo, para voltar sempre a pagina inicial-->
                 <a href="#">Portfólio</a> <!-- o a é para o menu criar essa estensão-->
             </div> 
+            <audio id="meuAudio" controls>
+                <source src="./assets/songs/Debugando a Alma.mp3" type="audio/mpeg">
+            </audio>
 
             <nav> <!--navegador - é contruico com marcadores ordenados ou não ordenados-->
                 <ul class="flex menu_list">
                     <li><a href="#hero">Início</a></li>
                     <li><a href="#about">Sobre</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="#projeto">Projetos</a></li>
+                    <li><a href="#contact">Contato</a></li>   
                 </ul>
             </nav>
         </article>
@@ -102,11 +106,70 @@
            
         </section>
 
+        <!-- Meus Projetos -->
+        <section id="projeto" class="projeto_container">
+        <h2>Conheça alguns dos meus projetos!</h2>
+            <!-- Primeiro projeto - Loja Games  -->
+            <div class="slides">
+            <div class=projeto_image>
+                <img src="https://ik.imagekit.io/kv6tr431r/Projetos%20para%20o%20blog/Loja_games_CRUD.png" alt=" Meu primeiro CRUD completo + security " >
+            </div> 
+            <article class="projeto_contant">
+            <h4>Loja de Games – Projeto Backend com Spring Boot</h4>
+            <p>A Loja de Games é um projeto backend desenvolvido em Java com Spring Boot, contendo um CRUD completo para gerenciamento de jogos. </p>
+            <p>Foi implementado Spring Security para autenticação de usuários, garantindo acesso seguro aos endpoints. Por regra de negócio, a funcionalidade de exclusão (DELETE) foi desativada. O projeto demonstra práticas essenciais de APIs REST e segurança no desenvolvimento backend.</p>
+            <a href="https://github.com/sgeo21/Projeto-Loja-Games/tree/Security" target="_blank" class="botao">Veja no github</a>
+            </article>    
+            </div>
+            
+            <!-- Segundo projeto - Farmácia -->
+            <div class="slides" >
+            <div class=projeto_image>
+                <img src="https://ik.imagekit.io/kv6tr431r/Projetos%20para%20o%20blog/Farmacia_CRUD.png" alt=" Projeto Farmácia para avaliação de módulo, avaliado com nota máxima!" >
+            </div> 
+            <article class="projeto_contant">
+            <h4>API Farmácia – Backend em Java com Spring Boot</h4>
+            <p>Este projeto é uma aplicação backend desenvolvida em Java com Spring Boot, criada para oferecer uma API REST completa para o gerenciamento de clientes, produtos e categorias de uma farmácia.</p>
+            <p>A solução foi pensada para organizar e automatizar processos internos, facilitando o controle de estoque, a categorização de itens e o acesso rápido a informações essenciais sobre os produtos.</p>
+            <a href="https://github.com/sgeo21/projeto_final_bloco_02/tree/04_Extras" target="_blank" class="botao" >Veja no github</a>
+            </article>
+            </div>
+            
+            <!-- Terceiro projeto - Tempo -->
+            <div class="slides" >
+            <div class=projeto_image>
+                <img src="https://ik.imagekit.io/kv6tr431r/Projetos%20para%20o%20blog/Tempo.png" alt=" Projeto verificação tempo por cidade - Open-Meteo" >
+            </div> 
+            <article class="projeto_contant">
+            <h4>🌦️ Aplicativo de Clima – Open Meteo</h4>
+            <p>Este projeto é um aplicativo simples de consulta climática, desenvolvido em HTML, CSS e JavaScript, que permite ao usuário pesquisar informações meteorológicas pelo nome de qualquer cidade.</p>
+            <p>A aplicação consome a API pública Open-Meteo para obter coordenadas (latitude e longitude) e apresentar dados de clima em tempo real, como temperatura e condições atuais.</p>
+            <a href="https://sgeo21.github.io/Projeto-tempo/" target="_blank" class="botao" >Teste você mesmo!</a>
+            </article>
+            </div>
+            
+            <!-- Quarto projeto - Empresa -->
+            <div class="slides" >
+            <div class=projeto_image>
+                <img src="https://ik.imagekit.io/kv6tr431r/Projetos%20para%20o%20blog/Bluepeak.png" alt=" Projeto de uma empresa ficticia" >
+            </div> 
+            <article class="projeto_contant">
+            <h4>📘 Site Institucional – BluePeak Agency</h4>
+            <p>A BluePeak Agency é uma agência digital fictícia criada para fins de estudo. Este repositório apresenta o desenvolvimento de seu site institucional, construído inteiramente com HTML5 e W3.CSS.</p>
+            <p>O projeto foca em responsividade, leveza e boas práticas de marcação, servindo como exercício de aprimoramento em desenvolvimento web.</p>
+            <a href="https://github.com/sgeo21/bluepeak-agency/tree/01_slideshow" target="_blank" class="botao" >Veja no github</a>
+            </article>
+            </div>
+            
+            
+        </section>
+
+
         <section id="contact" class="contact_container"> 
 
             <!-- links para redes sociais -->
             <article class="contact_info">
-                <h4> Entre em contato</h4>
+                <h4>Entre em contato</h4>
                 <p> Sinta-se à vontade para entrar em contato comigo</p>
                 <div class="social_container">
                     <a href="https://www.linkedin.com/in/geovana-cazali/" target="_blank" class="social_icon">

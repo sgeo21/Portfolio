@@ -121,6 +121,42 @@ formulario.addEventListener('submit', function(event){
     formulario.submit();
 })
 
+//cria o carrossel de projetos 
+        var myIndex = 0;
+            carousel();
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("slides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) { myIndex = 1 }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 5000); // Change image every 2 seconds
+            }
+            // Audio
+function tocarAudio() {
+    var audio = document.getElementById('meuAudio');
+    audio.play();
+}
+
+// Alternativamente, para controlar o loop via JS (embora o atributo HTML seja suficiente):
+var audioJS = document.getElementById('meuAudio');
+audioJS.loop = true; {
+
+    const meuAudio = document.getElementById("meuAudio");
+    meuAudio.play();
+}
+
+function pausarAudio() {
+    const meuAudio = document.getElementById("meuAudio");
+    meuAudio.pause();
+}
+
+    
+
 // Chamar a função getAPIGithub()
+
 
 getApiGithub();
