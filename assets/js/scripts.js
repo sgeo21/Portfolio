@@ -70,60 +70,59 @@ async function getApiGithub(){
     }
 }
 
-// Função de envio e validação do formulário
-formulario.addEventListener('submit', function(event){
-    //Impedir o envio automático do formulário 
-    event.preventDefault(); // não enviar o formulário enquanto não houver a validação
+    // Função de envio e validação do formulário
 
-    //Validação do campo nome
-    const campoNome = document.querySelector('#nome');
-    const txtNome =document.querySelector('#txtNome');
+    formulario.addEventListener("submit", function (event) {
 
-    // Nome precisa ter no minimo 3 carcateres
+    //Impedir o envio automatico do formulário (sem validar os dados primeiro)
+        event.preventDefault();
 
-    if(campoNome.value.length <3){
-        txtNome.innerHTML = 'O nome deve ter no mínimo 3 caracteres.';
-        campoNome.focus();
-        return;
-    }else{
-        txtNome.innerHTML = ''; 
-    }
+        // Validação do campo nome
+        const campoNome = document.querySelector("#nome");
+        const txtNome = document.querySelector("#txtNome");
 
-     //Validação do campo e-mail
-    const campoEmail = document.querySelector('#email');
-    const txtEmail =document.querySelector('#txtEmail');
+        // Nome precisa ter no minimo 3 caracteres
+        if (campoNome.value.length < 3) {
+            txtNome.innerHTML = "Nome deve ter no mínimo 3 caracteres.";
+            campoNome.focus();
+                return;
+        } else {
+            txtNome.innerHTML = " ";
+        }
 
-    // Email precisa ter no minimo caracteres especiais @,., etc.
+        // Validação do campo e-mail
+        const campoEmail = document.querySelector("#email");
+        const txtEmail = document.querySelector("#txtEmail");
 
-    if(!campoEmail.value.match(emailRegex)){ // verifica a digitação
-        txtEmail.innerHTML = 'Digite um e-mail válido.'; // pede a correção
-        campoEmail.focus(); 
-        return;
-    }else{
-        txtEmail.innerHTML = ''; 
-    }
+        // Verifica se o e-mail é válido
+        if (!campoEmail.value.match(emailRegex)) {
+            txtEmail.innerHTML = "Digite um e-mail válido";
+            campoEmail.focus();
+            return;
+        } else {
+            txtEmail.innerHTML = " ";
+        }
 
-    //Validação do campo Assunto
-    const campoAssunto = document.querySelector('#assunto');
-    const txtAssunto =document.querySelector('#txtAssunto');
+        // Validação do campo assunto
+        const campoAssunto = document.querySelector("#assunto");
+        const txtAssunto = document.querySelector("#txtAssunto");
 
-    // Nome precisa ter no minimo 5 carcateres
+        // Assunto precisa ter no minimo 5 caracteres
+        if (campoAssunto.value.length < 5) {
+            txtAssunto.innerHTML = "O assunto deve ter no mínimo 5 caracteres.";
+            campoAssunto.focus();
+            return;
+        } else {
+            txtAssunto.innerHTML = " ";
+        }
 
-    if(campoAssunto.value.length <5){
-        txtAssunto.innerHTML = 'O assunto deve ter no mínimo 5 caracteres.';
-        campoAssunto.focus();
-        return;
-    }else{
-        txtAssunto.innerHTML = ''; 
-    }
-    //pode fazer uma validação de mensagem se quiser! 
-    //Se passou por todas as validações, envia o formulário
-    formulario.submit();
-});
+        // Se passou por todas as validações
+        formulario.submit();
+    });
 
-// Chamar a função getAPIGithub()
+    // Chamar a função getAPIGithub()
 
-getApiGithub();
+    getApiGithub();
 
 
     //cria o carrossel de projetos 
@@ -141,18 +140,18 @@ getApiGithub();
                 setTimeout(carousel, 5000); // Change image every 2 seconds
             }
         
-            // Audio
-            function tocarAudio() {
-                 var audio = document.getElementById('meuAudio');
-                 audio.play();
-                }
-            // Alternativamente, para controlar o loop via JS (embora o atributo HTML seja suficiente):
-                var audioJS = document.getElementById('meuAudio');
-                audioJS.loop = true; {
-                    const meuAudio = document.getElementById("meuAudio");
-                    meuAudio.play();
-                }
-            function pausarAudio() {
+        // Audio
+        function tocarAudio() {
+             var audio = document.getElementById('meuAudio');
+             audio.play();
+        }
+        // Alternativamente, para controlar o loop via JS (embora o atributo HTML seja suficiente):
+            var audioJS = document.getElementById('meuAudio');
+            audioJS.loop = true; {
                 const meuAudio = document.getElementById("meuAudio");
-                meuAudio.pause();
+                meuAudio.play();
             }
+        function pausarAudio() {
+            const meuAudio = document.getElementById("meuAudio");
+            meuAudio.pause();
+        }
