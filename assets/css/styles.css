@@ -151,6 +151,7 @@ button{
     max-width: 30%;
     height: 30px;
     border-radius: 2rem;
+
 }
 
 /* Configurar as seções, estilos comuns*/
@@ -304,18 +305,20 @@ button{
 
 /* Projetos */
 .projeto_container{
-    margin: 4rem auto;
+    border-radius: 1rem; 
+    flex-wrap: wrap; /*faz com que os elementos que não couberem na tela pulem para a próxima linha*/
+     min-height: calc(100vh - 5rem);
     display: flex;
     align-items: center;
-    gap: 4rem;
-    border-radius: 1rem; 
+    justify-content: center;
+    gap:4rem; 
 }
+
 .projeto_contant{
-    display: flex;
-    flex-direction: column;
     text-align: justify;
     gap: 1rem;
     max-width: 50rem;
+    
 }
 
 .projeto_contant p {
@@ -323,7 +326,6 @@ button{
     line-height: 1.75rem;
     color: var(--gray-400);
     margin-bottom: 1rem;
-    flex-wrap: wrap; /*faz com que os elementos que não couberem na tela pulem para a próxima linha*/
 }
 
 .projeto_container h2 {
@@ -332,11 +334,17 @@ button{
     margin-bottom: 1.5rem;
     color: var(--purple-800);
 }
+
 .projeto_contant h4 {
     font-size: 1.25rem;
     font-weight: 600;
-    line-height: 1.5;
-    color: var(--black-800);
+    line-height: 2;
+    color: var(--purple-900);
+}
+.projeto_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .projeto_image img{
@@ -349,7 +357,6 @@ button{
     box-shadow: var(--shadow-lg);
     transition: all 0.3s ease;
     gap: 4rem;
-
 }
 
 
@@ -616,8 +623,8 @@ footer{
     }
 }
 
-/* Smartfones (até 490px) */
-@media screen and (max-width: 490px) {
+/* Smartfones (até 750px) */
+@media screen and (max-width: 750px) {
     /* Menu */
 
     .menu_content {
@@ -633,7 +640,14 @@ footer{
         font-size: 1.25rem; 
         color: var(--white);
     }
+    #meuAudio {
+        max-width: 30%;
+        height: 20px;
+        border-radius: 2rem;
+        margin: 2rem auto;
 
+        
+    }
 
     /* hero */
      .hero_container {
@@ -703,12 +717,38 @@ footer{
         font-size: 0.75rem;
     }
 
+    /* Projetos */
+    .projeto_container {
+        flex-direction: column-reverse;
+        padding: 1.5rem 1rem;
+        margin: 2rem auto;
+        display: flex;
+        
+    }
+    .projeto_container h2 {
+        font-size: 1.75rem;
+    }
+
+    .projeto_image img {
+        max-width: 12rem;
+    }
+
+    .projeto_content p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        
+    }
+    .projeto_content h4 {
+        font-size: 1rem;
+    }
 
     /* Contact */
      .contact_container {
         padding: 1.5rem 1rem;
         margin: 2rem auto;
         gap: 2rem;
+        
+
     }
 
     .contact_info h4 {
@@ -729,7 +769,9 @@ footer{
         width: 3.5rem;
         height: 3.5rem;
         padding: 0.75rem;
+
     }
+
 
       /* Formulário */
     form input,
